@@ -1,0 +1,137 @@
+{
+  "data": {
+    "recept": [
+      {
+        "feltolto": 1,
+        "knev": "tészta",
+        "status": "new",
+        "kategoria": "tészta",
+        "description": "tészta",
+        "createdAt": "2015-10-30T11:14:39.459Z",
+        "updatedAt": "2015-10-30T11:14:39.459Z",
+        "id": 2
+      },
+      {
+        "feltolto": 2,
+        "knev": "dokpo",
+        "status": "new",
+        "kategoria": "pkpok",
+        "description": "moip",
+        "createdAt": "2015-10-30T11:28:55.972Z",
+        "updatedAt": "2015-10-30T11:28:55.972Z",
+        "id": 3
+      }
+    ],
+    "user": [
+      {
+        "surname": "asd",
+        "forename": "asd",
+        "felhnev": "asd",
+        "password": "$2a$10$htsU7/TwCubs2Q2F9mXFe.sHbY0niva.Jt0z4QX9YkCRurvpFkS52",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-30T10:41:20.322Z",
+        "updatedAt": "2015-10-30T10:41:20.322Z",
+        "id": 1
+      },
+      {
+        "surname": "qwe",
+        "forename": "qwe",
+        "felhnev": "qwe",
+        "password": "$2a$10$otNgmJnay0ddR57mYHpt6uGRUJNgNkTwhvUyUOtwebcuOmTnIWWhe",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-30T11:15:02.515Z",
+        "updatedAt": "2015-10-30T11:15:02.515Z",
+        "id": 2
+      }
+    ]
+  },
+  "schema": {
+    "recept": {
+      "knev": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "new",
+          "assigned",
+          "success",
+          "rejected",
+          "pending"
+        ]
+      },
+      "kategoria": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "felhnev": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "surname": {
+        "type": "string"
+      },
+      "forename": {
+        "type": "string"
+      },
+      "avatar": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "riporter",
+          "operator"
+        ],
+        "defaultsTo": "riporter"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "recept": {
+      "id": 3
+    },
+    "user": {
+      "id": 2
+    }
+  }
+}

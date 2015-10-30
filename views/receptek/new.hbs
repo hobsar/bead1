@@ -1,0 +1,55 @@
+<div class="page-header">
+    <h1>Új recept beküldése</h1>
+</div>
+
+<form class="form-horizontal" method="post">
+    <fieldset>
+        <div class="form-group
+			{{#if validationErrors.knev}}
+				has-error
+			{{/if}}
+		">
+			<label for="knev" class="col-lg-2 control-label">Étel neve</label>
+			<div class="col-lg-10">
+				<input class="form-control" id="knev" name="knev" placeholder="valamilyen kreatív név az ételnek" type="text" value"{{data.knev}}">
+				{{#if validationErrors.knev}}
+					<span class="help-block">{{validationErrors.knev.msg}}</span>
+				{{/if}}
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.katkat}}
+                has-error
+            {{/if}}
+        ">
+            <label for="katkat" class="col-lg-2 control-label">Kategória</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="katkat" name="katkat" placeholder="pl. leves, tészta étel, főzelék" type="text" value="{{data.katkat}}">
+                {{#if validationErrors.katkat}}
+                    <span class="help-block">{{validationErrors.katkat.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.leiras}}
+                has-error
+            {{/if}}
+        ">
+            <label for="leiras" class="col-lg-2 control-label">Recept</label>
+            <div class="col-lg-10">
+                <textarea class="form-control" rows="3" id="leiras" name="leiras">{{data.leiras}}</textarea>
+               
+                {{#if validationErrors.leiras}}
+                    <span class="help-block">{{validationErrors.leiras.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <a href="/receptek/list" class="btn btn-info" role="button">Mégse</a>
+                {{!--<button type="reset" class="btn btn-default">Mégse</button>--}}
+                <button type="submit" class="btn btn-primary">Küldés</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
