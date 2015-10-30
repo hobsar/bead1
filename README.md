@@ -95,5 +95,9 @@
 ## Felhasználói dokumentáció
 
 ### A futtatáshoz ajánlott hardver-, szoftver konfiguráció
+A heroku vagy a Cloud9 használatával lehet futtatni a programot.
 ### Telepítés lépései: hogyan kerül a Githubról a célgépre a program
+Nincs szükség telepítésre, a program megtakinthető: http://bead1.herokuapp.com/
 ### A program használata
+Cloud9-on a Run gomb segítségével futtatható a program.
+vagy a http://bead1.herokuapp.com/ címen érhető el.
