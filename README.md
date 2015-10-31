@@ -47,7 +47,12 @@
 
 
 #### Oldalvázlatok
+![Oldalvázlat](docs/images/váz2.png)
 ![Oldalvázlat](docs/images/oldalvázlat.png)
+
+#### Designe terv
+
+![Designe terv](docs/images/designe.png)
 
 #### Adatmodell
 ![Adatmodell](docs/images/adatm.png)
